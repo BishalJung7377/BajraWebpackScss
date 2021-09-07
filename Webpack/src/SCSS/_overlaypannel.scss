@@ -1,0 +1,72 @@
+@import "./base";
+@import "./variables";
+
+$position: absolute;
+$height: 100%;
+$transform: transform 0.6s;
+$translate: translateX;
+$fifty : 50%;
+
+
+
+.overlay-container {
+    position: $position;
+    top: 0;
+    left: $fifty;
+    width: $fifty;
+    height: $height;
+    overflow: hidden;
+    transition: $transform ease-in-out;
+    z-index: 100;
+}
+
+.container.right-panel-active .overlay-container {
+    transform: translateX(-$height);
+}
+
+.overlay {
+    
+    color: $primary-color;
+    position: relative;
+    left: -$height;
+    height: $height;
+    width: 200%;
+    transform: translateX(0);
+    transition: $transform ease-in-out;
+}
+
+.container.right-panel-active .overlay {
+    transform: translateX($fifty);
+}
+
+.overlay-panel {
+    position: $position;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: $height;
+    width: $fifty;
+    transform: translateX(0);
+    transition: $transform ease-in-out;
+}
+
+.overlay-left {
+    transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay-left {
+    transform: translateX(0);
+}
+
+.overlay-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+    transform: translateX(20%);
+}

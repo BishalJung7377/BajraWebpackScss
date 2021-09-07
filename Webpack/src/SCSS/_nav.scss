@@ -1,0 +1,46 @@
+@import './variables';
+
+
+li, a ,button{
+    font-family: $font-style;
+    font-weight: 500;
+    font-size: 16px;
+    color: $navcolo;
+    text-decoration: none;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+
+}
+
+.navlink{
+    list-style: none;
+    li{
+        display: inline-block;
+        padding: 0px 20px;
+        a{
+            transition: all 0.3s ease 0s;
+        &:hover{
+                color: #0088A9;
+            }
+        }
+    }
+}
+
+buttn{
+    padding: 9px 25px;
+    background-color: rgba(0,135,169,1);
+    border:none;
+    border-radius: 5em;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+&:hover{
+        background-color: rgba(0,135,169,0.8);
+    }
+
+}

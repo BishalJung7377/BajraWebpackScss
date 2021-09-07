@@ -1,0 +1,66 @@
+
+@import "./variables";
+$centeredcontent: center;
+$transform: transform 80ms;
+
+
+body {
+    background: $backgroundblack;
+    justify-content: $centeredcontent;
+    align-items: $centeredcontent;
+    flex-direction: column;
+    font-family: $font-style;
+    height: 50vh;
+}
+
+h1 {
+    margin: 0px;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+}
+
+span {
+    font-size: $fontsize;
+}
+
+a {
+    color: $bluecolor;
+    font-size: $fontsize;
+    text-decoration: none;
+    margin: 15px 0;
+    cursor: pointer;
+}
+button:active {
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+}
+
+button.ghost {
+    background-color: transparent;
+    border-color: $primary-color;
+}
+button{
+    border-radius: 20px;
+    border: 1px solid $sec-solor;
+    background-color: $sec-solor;
+    color: $primary-color;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: $transform ease-in;
+}
