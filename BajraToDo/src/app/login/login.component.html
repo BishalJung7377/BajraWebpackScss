@@ -1,0 +1,106 @@
+<div class="login-container">
+  <div class="form-container">
+    <form
+      [formGroup]="loginformvalidation"
+      #loginFormVali="ngForm"
+      (ngSubmit)="loginFormData(loginFormVali.value)"
+    >
+      <h1 class="title">{{title}}</h1>
+      <h2>{{logintoyAcc}}</h2>
+      <p class="subtitle">{{welcomeback}}</p>
+      <br />
+      <div class="email-login">
+        <div class="iconsinput">
+          <p for="email"><a>{{elabel}}</a></p>
+          <input
+            type="text"
+            ngModel
+            formControlName="email"
+            size="40"
+            placeholder="Enter Email"
+            name="email"
+            email
+            id="validationCustom01"
+            required
+          />
+          <i class="fas fa-user" aria-hidden="true"></i>
+
+          <div class="tick" *ngIf="loginValidation.email.valid; else elseBlock">
+            <i class="fas fa-check" aria-hidden="true"></i>
+          </div>
+          <ng-template #elseBlock>
+            <div class="tickclose">
+              <i class="fas fa-times" aria-hidden="true"></i>
+            </div>
+          </ng-template>
+        </div>
+        <span
+          class="emailerror"
+          *ngIf="loginValidation.email.invalid && loginValidation.email.touched"
+        >
+         {{emailerrmsg}}</span
+        >
+
+        <div class="iconsinput">
+          <p for="psw"><a>{{plabel}}</a></p>
+          <input
+            type="password"
+            matInput
+            [type]="hide ? 'password' : 'text'"
+            ngModel
+            formControlName="password"
+            size="40"
+            placeholder="Enter Password"
+            name="password"
+            minlength="8"
+            required
+          />
+          <i class="fas fa-lock"></i>
+          <div class="mateye">
+            <mat-icon
+              matSuffix
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide"
+              (click)="hide = !hide"
+              class="eye"
+              >{{ hide ? "visibility_off" : "visibility" }}</mat-icon
+            >
+          </div>
+        </div>
+        <span
+          class="passworderror"
+          *ngIf="
+            loginValidation.password.invalid && loginValidation.password.touched
+          "
+        >
+        {{passworderrmsg}}</span
+        >
+
+        <a
+          style="text-align: right; color: #800000"
+          class="forget-pass"
+          routerLink="/forgotpassword"
+          >{{passforget}}</a
+        >
+      </div>
+      <div class="login-button">
+        <button
+          class="cta-btn"
+          mat-raised-button
+          color="primary"
+          [disabled]="!loginformvalidation.valid"
+          type="submit"
+        >
+          Log In
+        </button>
+      </div>
+      <p style="text-align: center">
+        {{noregister}}
+        <a style="text-align: center; color: #800000" class="create-acc"
+          >{{creataCC}}</a
+        >
+      </p>
+    </form>
+    <div class="image-holder"></div>
+  </div>
+</div>

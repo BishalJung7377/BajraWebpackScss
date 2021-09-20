@@ -1,0 +1,68 @@
+@import "./variables";
+@import "./card";
+
+$bordBox:border-box;
+
+input[type="text"],
+input[type="password"] {
+  padding: $fiftenPx $twentPX;
+  margin-top: $eightPX;
+  margin-bottom: $fiftenPx;
+  border: 1px solid #ccc;
+  border-radius: $eightPX;
+  box-sizing: $bordBox;
+}
+.iconsinput input[type="text"],
+input[type="password"] {
+  padding-left: $fortyPx;
+}
+.iconsinput {
+  position: $posRelative;
+}
+.iconsinput i {
+  position: $posabsolute;
+  left: 0;
+  top: 9px $eightPX;
+  transition: 0.3s;
+  margin-top: 28px;
+  margin-left: $twentPX;
+}
+.iconsinput input[type="text"]:focus + i {
+  color: $bajracolor;
+}
+.iconsinput input[type="password"]:focus + i {
+  color: $bajracolor;
+}
+input:invalid {
+    background-color: #ffdddd;
+  }
+  
+  input:valid {
+    background-color: $primarycolor;
+  }
+  
+  form:valid {
+    border: 1px $solid $primarycolor;
+  }
+
+  input:required {
+    border-color: $bajracolor;
+    border-width: 1px;
+  }
+  
+  input:required:invalid {
+    border-color: $bordColor;
+  }
+  ng-invalid:not(input) {
+    border: 1px $solid  $valerr;
+  }
+  ng-valid:not(form) {
+    border: 1px $solid green;
+  }
+  
+  .emailerror {
+    color:  $valerr;
+  }
+  .passworderror {
+    color: $valerr;
+  }

@@ -1,0 +1,36 @@
+@import "./variables";
+
+
+@mixin posLEft {
+    position: $posabsolute;    
+    left: $left;
+    transition:$transition;
+    margin-left: margi350;
+}
+
+
+.mateye {
+    position: absolute;
+    left: 0;
+    transition: 0.3s;
+    color: #aaa;
+    margin-top: -53px;
+    margin-left: 360px;
+  }
+  .tick {
+    position: absolute;
+    left: 0;
+    transition: 0.3s;
+    margin-left: 350px;
+    margin-top: -75px;
+    color: green;
+  }
+  .tickclose{
+    position: absolute;
+    left: 0;
+    margin-left: 350px;
+    transition: 0.3s;
+    margin-top: -75px;
+    color: red;
+   
+  }

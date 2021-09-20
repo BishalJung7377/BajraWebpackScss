@@ -1,0 +1,46 @@
+@import "./variables";
+
+
+$displa:table-cell;
+$contWeidth:auto;
+$tabledisplay: table;
+$maxwidth:900px;
+$percWidth:100%;
+$mediaMaxweidth:991px;
+
+.login-container {
+  margin-top: $tenEm;
+  font-family: $font-family;
+  padding: 1.8rem;
+}
+.login-container .image-holder {
+  display: $displa;
+  width: $contWeidth;
+  background: $backimage;
+  position: $pos;
+  background-repeat: repeat-y;
+}
+.login-container .form-container {
+  display: $tabledisplay;;
+  max-width: $maxwidth;
+  width: $percWidth;
+  margin: 0 $contWeidth;
+  border-radius: $twentPX;
+  padding: 1.8rem;
+  box-shadow: 2px 5px $twentPX rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 900px) {
+  .login-container form {
+    padding: 40px;
+  }
+}
+.icon {
+  margin-top: $tenPx;
+}
+.login-container form {
+  display: $displa;
+  width: 400px;
+  background-color: $f6color;
+  padding: $fortyPx 60px;
+}

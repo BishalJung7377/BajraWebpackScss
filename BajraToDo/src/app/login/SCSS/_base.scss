@@ -1,0 +1,43 @@
+@import "./variables";
+@import "./card";
+@import "./inputfield";
+
+$bordernon: none;
+$bordersolid: solid 2px;
+$marginleftright: auto;
+$margintopbottom: 3em;
+$titlemargin:237px;
+$subtitlemargin:170px;
+$bajracolor:#922724;
+$flexdisp: flex;
+
+.title {
+  text-align: $leftTextalign;
+  font-weight: $fontweight;
+  margin: $marginleftright;
+  color: $bajracolor;
+  font-weight: bolder;
+}
+.subtitle {
+  text-align: $leftTextalign;
+  font: weight $tenPx;
+}
+.cta-btn {
+  background-color: $bajracolor;
+  color: $primarycolor;
+  padding: 18px $twentPX;
+  margin-top: $tenPx;
+  margin-bottom:  $twentPX;
+  width: $percWidth;
+  border-radius:  $tenPx;
+  border: $bordernon;
+}
+
+.email-login {
+  display: $flexdisp;
+  flex-direction: column;
+  width: 400px;
+}
+.email-login label {
+  color: rgb(170 166 166);
+}

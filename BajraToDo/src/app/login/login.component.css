@@ -1,0 +1,156 @@
+.login-container {
+  margin-top: 10em;
+  font-family: sans-serif;
+  padding: 1.8rem;
+}
+.login-container .image-holder {
+  display: table-cell;
+  width: auto;
+  background: url("../../assets/images/login.jpg");
+  position: relative;
+  background-repeat: repeat-y;
+}
+.title {
+  text-align: left;
+  font-weight: bold;
+  margin: auto;
+  color: #800000;
+  font-weight: bolder;
+}
+.subtitle {
+  text-align: left;
+  font: weight 10px;
+}
+
+.login-container .form-container {
+  display: table;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 1.8rem;
+  box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.1);
+}
+.cta-btn {
+  background-color: #800000;
+  color: #fff;
+  padding: 18px 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+}
+
+.icon {
+  margin-top: 10px;
+}
+.login-container form {
+  display: table-cell;
+  width: 400px;
+  background-color: #ffffff;
+  padding: 40px 60px;
+}
+
+@media (max-width: 991px) {
+  .login-container form {
+    padding: 40px;
+  }
+}
+.email-login {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+.email-login label {
+  color: rgb(170 166 166);
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 15px 20px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+.iconsinput input[type="text"],
+input[type="password"] {
+  padding-left: 40px;
+}
+.iconsinput {
+  position: relative;
+}
+.iconsinput i {
+  position: absolute;
+  left: 0;
+  top: 9px 8px;
+  transition: 0.3s;
+  margin-top: 28px;
+  margin-left: 20px;
+}
+.iconsinput input[type="text"]:focus + i {
+  color: #800000;
+}
+.iconsinput input[type="password"]:focus + i {
+  color: #800000;
+}
+
+.mateye {
+  position: absolute;
+  left: 0;
+  color: #aaa;
+  transition: 0.3s;
+  margin-top: -53px;
+  margin-left: 360px;
+}
+.tick {
+  position: absolute;
+  left: 0;
+  color: green;
+  transition: 0.3s;
+  margin-top: -75px;
+  margin-left: 350px;
+}
+.tickclose{
+  position: absolute;
+  left: 0;
+  color: red;
+  transition: 0.3s;
+  margin-top: -75px;
+  margin-left: 350px;
+}
+input:invalid {
+  background-color: #ffdddd;
+}
+
+input:valid {
+  background-color: white;
+}
+
+form:valid {
+  border: 1px solid white;
+}
+
+input:required {
+  border-color: #800000;
+  border-width: 1px;
+}
+
+input:required:invalid {
+  border-color: #c00000;
+}
+ng-invalid:not(input) {
+  border: 1px solid red;
+}
+ng-valid:not(form) {
+  border: 1px solid green;
+}
+
+.emailerror {
+  color: red;
+}
+.passworderror {
+  color: red;
+}
